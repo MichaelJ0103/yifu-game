@@ -1,0 +1,46 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.dialogue {
+  background: #fff5e6;
+  border: 2px solid #ffd699;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#response {
+  margin-top: 20px;
+  font-weight: bold;
+}

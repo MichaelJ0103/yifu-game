@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>醫輔任務日記 - 阿哲篇</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>醫輔任務日記：阿哲的挑戰</h1>
+    <div class="scene">
+      <img src="azhe.png" alt="焦慮的阿哲" class="character" />
+      <div class="dialogue">
+        <p>你看到阿哲站在諮商中心門口，他看起來很焦慮，你會對他說什麼？</p>
+        <div class="options">
+          <button onclick="choose(1)">你也太緊張了吧，根本沒事好嗎？</button>
+          <button onclick="choose(2)">你可以試著跟他們聊聊，也許會輕鬆一點。</button>
+          <button onclick="choose(3)">你就是太軟弱才會焦慮吧？</button>
+        </div>
+        <p id="response"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
