@@ -1,14 +1,26 @@
-function choose(option) {
-  const response = document.getElementById('response');
-  switch(option) {
-    case 1:
-      response.textContent = "（阿哲看起來更緊張了…）這樣說好像不太適合。";
-      break;
-    case 2:
-      response.textContent = "（阿哲微笑了）你說得對，我會試試看，謝謝你！你獲得『安心徽章』！";
-      break;
-    case 3:
-      response.textContent = "（阿哲低下頭不說話）這樣講讓他更難受了…";
-      break;
-  }
+function completeMission(name) {
+  localStorage.setItem(name, 'done');
+  alert("任務完成！");
+  location.href = 'badges.html';
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (location.pathname.includes("badges.html")) {
+    const badgeList = document.getElementById("badgeList");
+    const azheDone = localStorage.getItem("azhe") === "done";
+    const xiaoyuDone = localStorage.getItem("xiaoyu") === "done";
+
+    if (azheDone) {
+      badgeList.innerHTML += "<li>阿哲任務完成徽章</li>";
+    }
+    if (xiaoyuDone) {
+      badgeList.innerHTML += "<li>小宇任務完成徽章</li>";
+    }
+    if (azheDone && xiaoyuDone) {
+      badgeList.innerHTML += "<li><strong>金牌徽章：完成所有任務！</strong></li>";
+    }
+    if (!azheDone && !xiaoyuDone) {
+      badgeList.innerHTML = "<li>尚未完成任何任務</li>";
+    }
+  }
+});
